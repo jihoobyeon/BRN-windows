@@ -40,6 +40,7 @@ namespace BabylonNative
   public:
     ReactNativeModule(jsi::Runtime& jsiRuntime, Dispatcher jsDispatcher)
       : m_env{ Napi::Attach(jsiRuntime) }
+      , m_rt{ std::move(jsiRuntime) }
       , m_jsDispatcher{ std::move(jsDispatcher) }
       , m_isRunning{ std::make_shared<bool>(true) }
       , m_isXRActive{ std::make_shared<bool>(false) }
@@ -95,7 +96,7 @@ namespace BabylonNative
       }
       else
       {
-        g_graphicsDevice->UpdateWindow(m_graphicsConfig.Window);
+      //  g_graphicsDevice->UpdateWindow(m_graphicsConfig.Window);
         g_graphicsDevice->UpdateSize(m_graphicsConfig.Width, m_graphicsConfig.Height);
       }
       g_graphicsDevice->UpdateMSAA(mMSAAValue);
@@ -244,7 +245,7 @@ namespace BabylonNative
   private:
     void CreateInitPromise()
     {
-      jsi::Runtime& jsiRuntime{ static_cast<napi_env>(m_env)->rt };
+      jsi::Runtime& jsiRuntime{ m_rt };
       m_initPromise = jsiRuntime.global().getPropertyAsFunction(jsiRuntime, "Promise").callAsConstructor
       (
         jsiRuntime,
@@ -263,6 +264,7 @@ namespace BabylonNative
     std::function<void()> m_resolveInitPromise{};
 
     Napi::Env m_env;
+    jsi::Runtime& m_rt{ reinterpret_cast<jsi::Runtime&>(m_env) };
     Dispatcher m_jsDispatcher{};
 
     std::shared_ptr<bool> m_isRunning{};
