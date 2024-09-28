@@ -1,6 +1,5 @@
 #include "pch.h"
 #include "EngineViewManager.h"
-
 #include "JSValueReader.h"
 #include "JSValueXaml.h"
 
@@ -62,5 +61,9 @@ namespace winrt::BabylonReactNative::implementation {
         return [](winrt::Microsoft::ReactNative::IJSValueWriter const& constantWriter) {
             WriteCustomDirectEventTypeConstant(constantWriter, "onSnapshotDataReturned");
         };
+    }
+
+    void RegisterEngineViewNativeComponent(IReactPackageBuilder const& builder) noexcept {
+      Codegen::RegisterEngineViewNativeComponent<winrt::BabylonReactNative::implementation::EngineViewManager>(builder, {});
     }
 } // namespace winrt::BabylonReactNative::implementation

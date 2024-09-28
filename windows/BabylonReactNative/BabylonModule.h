@@ -1,5 +1,10 @@
 #pragma once
-
+/*
+#if __has_include("codegen\NativeBabylonDataTypes.g.h")
+#include "codegen\NativeBabylonDataTypes.g.h"
+#endif
+#include "codegen\NativeBabylonSpec.g.h"
+*/
 #include "NativeModules.h"
 
 namespace winrt::BabylonReactNative::implementation {

@@ -16,6 +16,9 @@ namespace winrt::BabylonReactNative::implementation
 void ReactPackageProvider::CreatePackage(IReactPackageBuilder const &packageBuilder) noexcept
 {
   AddAttributedModules(packageBuilder, true);
+
+  packageBuilder.AddModule(L"BabylonModule", MakeModuleProvider<BabylonModule>());
+  RegisterEngineViewNativeComponent(packageBuilder);
 }
 
 } // namespace winrt::BabylonReactNative::implementation

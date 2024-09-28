@@ -47,11 +47,12 @@
   },
   "packageManager": "yarn@3.6.4",
   "codegenConfig": {
-    "name": "BabylonReactNativeSpec",
-    "type": "modules",
-    "jsSrcsDir": "../react-native",
+    "name": "BabylonReactNative",
+    "type": "all",
+    "jsSrcsDir": ".",
     "windows": {
-      "namespace": "BabylonReactNativeCodegen",
+      "generators": "componentsWindows",
+      "namespace": "winrt::BabylonReactNative::Codegen",
       "outputDirectory": "windows/BabylonReactNative/codegen",
       "separateDataTypes": true
     }

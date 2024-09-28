@@ -1,17 +1,13 @@
 #pragma once
 #include "NativeModules.h"
 #include "winrt/Microsoft.ReactNative.h"
+#include <winrt/Microsoft.UI.Composition.h>
 #include "EngineView.h"
+#include "codegen/react/components/BabylonReactNative/EngineView.g.h"
 
 namespace winrt::BabylonReactNative::implementation {
-
     struct EngineViewManager
-        : winrt::implements<
-        EngineViewManager,
-        winrt::Microsoft::ReactNative::IViewManager,
-        winrt::Microsoft::ReactNative::IViewManagerWithReactContext,
-        winrt::Microsoft::ReactNative::IViewManagerWithNativeProperties,
-        winrt::Microsoft::ReactNative::IViewManagerWithExportedEventTypeConstants> {
+        : winrt::implements<EngineViewManager, winrt::IInspectable>, Codegen::BaseEngineView<EngineViewManager> {
     public:
         EngineViewManager();
 
@@ -40,5 +36,5 @@ namespace winrt::BabylonReactNative::implementation {
         winrt::BabylonReactNative::EngineView _engineView{ nullptr };
     };
 
+    void RegisterEngineViewNativeComponent(winrt::Microsoft::ReactNative::IReactPackageBuilder const& builder) noexcept;
 } // namespace winrt::BabylonReactNative::implementation
-

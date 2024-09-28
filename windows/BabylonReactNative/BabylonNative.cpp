@@ -47,16 +47,11 @@ namespace BabylonNative
     {
       // Initialize a JS promise that will be returned by whenInitialized, and completed when NativeEngine is initialized.
       CreateInitPromise();
-
+      
       // Initialize Babylon Native core components
       Babylon::JsRuntime::CreateForJavaScript(m_env, Babylon::CreateJsRuntimeDispatcher(m_env, jsiRuntime, m_jsDispatcher, m_isRunning));
 
       // Initialize Babylon Native plugins
-#ifndef BASEKIT_BUILD
-      m_nativeXr.emplace(Babylon::Plugins::NativeXr::Initialize(m_env));
-      m_nativeXr->SetSessionStateChangedCallback([isXRActive{ m_isXRActive }](bool isSessionActive) { *isXRActive = isSessionActive; });
-      Babylon::Plugins::NativeCamera::Initialize(m_env);
-#endif
       Babylon::Plugins::NativeCapture::Initialize(m_env);
       m_nativeInput = &Babylon::Plugins::NativeInput::CreateForJavaScript(m_env);
       Babylon::Plugins::NativeOptimizations::Initialize(m_env);
@@ -296,6 +291,7 @@ namespace BabylonNative
       jsiRuntime.global().setProperty(jsiRuntime, JS_INSTANCE_NAME, jsi::Object::createFromHostObject(jsiRuntime, nativeModule));
       g_nativeModule = nativeModule;
     }
+
     if (auto nativeModule{ g_nativeModule.lock() })
     {
       nativeModule->Initialize();
