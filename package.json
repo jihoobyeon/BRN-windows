@@ -1,18 +1,16 @@
 {
-  "name": "@babylonjs/react-native-windows",
+  "name": "@babylonjs/react-native-windows-view",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/babylonjs/BabylonReactNative.git",
-    "baseUrl": "https://github.com/babylonjs/BabylonReactNative"
+    "url": "git+https://github.com/babylonjs/BRN-windows.git#view",
+    "baseUrl": "https://github.com/babylonjs/BRN-windows"
   },
   "dependencies": {
     "@babylonjs/core": ">=5.53.1",
@@ -47,12 +45,12 @@
   },
   "packageManager": "yarn@3.6.4",
   "codegenConfig": {
-    "name": "BabylonReactNative",
-    "type": "all",
+    "name": "EngineView",
+    "type": "components",
     "jsSrcsDir": ".",
     "windows": {
       "generators": "componentsWindows",
-      "namespace": "winrt::BabylonReactNative::Codegen",
+      "namespace": "winrt::EngineView::Codegen",
       "outputDirectory": "windows/BabylonReactNative/codegen",
       "separateDataTypes": true
     }

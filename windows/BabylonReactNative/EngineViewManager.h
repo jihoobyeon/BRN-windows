@@ -3,7 +3,7 @@
 #include "winrt/Microsoft.ReactNative.h"
 #include <winrt/Microsoft.UI.Composition.h>
 #include "EngineView.h"
-#include "codegen/react/components/BabylonReactNative/EngineView.g.h"
+#include "codegen/react/components/EngineView/EngineView.g.h"
 
 namespace winrt::BabylonReactNative::implementation {
     struct EngineViewManager

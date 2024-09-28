@@ -5,7 +5,6 @@
 #include "ReactPackageProvider.g.cpp"
 #endif
 
-#include "BabylonModule.h"
 #include "EngineViewManager.h"
 
 using namespace winrt::Microsoft::ReactNative;
@@ -17,7 +16,6 @@ void ReactPackageProvider::CreatePackage(IReactPackageBuilder const &packageBuil
 {
   AddAttributedModules(packageBuilder, true);
 
-  packageBuilder.AddModule(L"BabylonModule", MakeModuleProvider<BabylonModule>());
   RegisterEngineViewNativeComponent(packageBuilder);
 }
 

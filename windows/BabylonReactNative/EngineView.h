@@ -1,6 +1,6 @@
 #pragma once
 #include "EngineView.g.h"
-#include "codegen/react/components/BabylonReactNative/EngineView.g.h"
+#include "codegen/react/components/EngineView/EngineView.g.h"
 #include <unordered_set>
 
 namespace winrt::BabylonReactNative::implementation {
