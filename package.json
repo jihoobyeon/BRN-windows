@@ -1,17 +1,15 @@
 {
-  "name": "@babylonjs/react-native-windows",
+  "name": "@babylonjs/react-native-windows-module",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/babylonjs/BabylonReactNative.git",
+    "url": "git+https://github.com/babylonjs/BabylonReactNative.git#module",
     "baseUrl": "https://github.com/babylonjs/BabylonReactNative"
   },
   "dependencies": {
@@ -47,12 +45,11 @@
   },
   "packageManager": "yarn@3.6.4",
   "codegenConfig": {
-    "name": "BabylonReactNative",
-    "type": "all",
+    "name": "BabylonModuleSpec",
+    "type": "module",
     "jsSrcsDir": ".",
     "windows": {
-      "generators": "componentsWindows",
-      "namespace": "winrt::BabylonReactNative::Codegen",
+      "namespace": "BabylonModuleCodegen",
       "outputDirectory": "windows/BabylonReactNative/codegen",
       "separateDataTypes": true
     }
