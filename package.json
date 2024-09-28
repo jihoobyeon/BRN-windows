@@ -9,8 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/babylonjs/BabylonReactNative.git#module",
-    "baseUrl": "https://github.com/babylonjs/BabylonReactNative"
+    "url": "git+https://github.com/babylonjs/BRN-windows.git#module",
+    "baseUrl": "https://github.com/babylonjs/BRN-windows"
   },
   "dependencies": {
     "@babylonjs/core": ">=5.53.1",
