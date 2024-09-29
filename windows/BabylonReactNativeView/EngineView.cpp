@@ -13,7 +13,7 @@ using namespace winrt::Microsoft::UI::Xaml::Media;
 using namespace winrt::Microsoft::UI::Xaml::Controls;
 using namespace winrt::Microsoft::ReactNative;
 
-namespace winrt::BabylonReactNative::implementation {
+namespace winrt::BabylonReactNativeView::implementation {
     EngineView::EngineView() {
 
         _revokerData.SizeChangedRevoker = SizeChanged(winrt::auto_revoke, {this, &EngineView::OnSizeChanged});

@@ -1,9 +1,3 @@
-const BabylonModule = require('./NativeBabylon').defualt;
+import NativeEngineView from './EngineView';
 
-export function initialize(): Promise<void> {
-  return BabylonModule.initialize();
-}
-
-export function resetView(): Promise<void> {
-  return BabylonModule.resetView();
-}
+export { NativeEngineView };

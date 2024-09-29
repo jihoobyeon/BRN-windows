@@ -4,7 +4,7 @@
 
 using namespace winrt::Microsoft::ReactNative;
 
-namespace winrt::BabylonReactNative::implementation
+namespace winrt::BabylonReactNativeView::implementation
 {
 
 struct ReactPackageProvider : ReactPackageProviderT<ReactPackageProvider>
@@ -15,7 +15,7 @@ struct ReactPackageProvider : ReactPackageProviderT<ReactPackageProvider>
 
 } // namespace winrt::BabylonReactNative::implementation
 
-namespace winrt::BabylonReactNative::factory_implementation
+namespace winrt::BabylonReactNativeView::factory_implementation
 {
 
 struct ReactPackageProvider : ReactPackageProviderT<ReactPackageProvider, implementation::ReactPackageProvider> {};

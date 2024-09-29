@@ -5,10 +5,10 @@
   <PropertyGroup Label="Globals">
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <MinimalCoreWin>true</MinimalCoreWin>
-    <ProjectGuid>{929A86E0-54FA-457B-B025-09632DE70275}</ProjectGuid>
-    <ProjectName>BabylonReactNative</ProjectName>
+    <ProjectGuid>{463137ED-C113-469E-8BB3-2D626F62973B}</ProjectGuid>
+    <ProjectName>BabylonReactNativeView</ProjectName>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BabylonReactNative</RootNamespace>
+    <RootNamespace>BabylonReactNativeView</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>17.0</MinimumVisualStudioVersion>
@@ -85,7 +85,7 @@
       <AdditionalDependencies>shell32.lib;user32.lib;windowsapp.lib;%(AdditionalDependenices)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
-      <ModuleDefinitionFile>BabylonReactNative.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>BabylonReactNativeView.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
@@ -110,7 +110,6 @@
   </ItemDefinitionGroup>
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClInclude Include="BabylonModule.h" />
     <ClInclude Include="BabylonNative.h" />
     <ClInclude Include="DispatchFunction.h" />
     <ClInclude Include="EngineView.h">
@@ -124,7 +123,6 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BabylonModule.cpp" />
     <ClCompile Include="BabylonNative.cpp" />
     <ClCompile Include="EngineView.cpp">
       <DependentUpon>EngineView.idl</DependentUpon>
@@ -143,7 +141,7 @@
     <Midl Include="ReactPackageProvider.idl" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="BabylonReactNative.rc" />
+    <ResourceCompile Include="BabylonReactNativeView.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ReactNativeWindowsTargets">

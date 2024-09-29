@@ -5,15 +5,15 @@
 #include "EngineView.h"
 #include "codegen/react/components/EngineView/EngineView.g.h"
 
-namespace winrt::BabylonReactNative::implementation {
+namespace winrt::BabylonReactNativeView::implementation {
     struct EngineViewManager
-        : winrt::implements<EngineViewManager, winrt::IInspectable>, Codegen::BaseEngineView<EngineViewManager> {
+        : winrt::implements<EngineViewManager, winrt::IInspectable>, winrt::EngineView::Codegen::BaseEngineView<EngineViewManager> {
     public:
         EngineViewManager();
 
         // IViewManager
         winrt::hstring Name() const noexcept;
-        winrt::BabylonReactNative::EngineView CreateView() noexcept;
+        winrt::BabylonReactNativeView::EngineView CreateView() noexcept;
 
         // IViewManagerWithReactContext
         winrt::Microsoft::ReactNative::IReactContext ReactContext() noexcept;
@@ -33,7 +33,7 @@ namespace winrt::BabylonReactNative::implementation {
 
     private:
         winrt::Microsoft::ReactNative::IReactContext _reactContext{ nullptr };
-        winrt::BabylonReactNative::EngineView _engineView{ nullptr };
+        winrt::BabylonReactNativeView::EngineView _engineView{ nullptr };
     };
 
     void RegisterEngineViewNativeComponent(winrt::Microsoft::ReactNative::IReactPackageBuilder const& builder) noexcept;

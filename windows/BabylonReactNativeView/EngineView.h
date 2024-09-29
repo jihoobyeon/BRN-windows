@@ -3,7 +3,7 @@
 #include "codegen/react/components/EngineView/EngineView.g.h"
 #include <unordered_set>
 
-namespace winrt::BabylonReactNative::implementation {
+namespace winrt::BabylonReactNativeView::implementation {
     struct EngineView : EngineViewT<EngineView>
     {
     public:
@@ -35,7 +35,7 @@ namespace winrt::BabylonReactNative::implementation {
     };
 }
 
-namespace winrt::BabylonReactNative::factory_implementation {
+namespace winrt::BabylonReactNativeView::factory_implementation {
 
 struct EngineView : EngineViewT<EngineView, implementation::EngineView> {};
 

@@ -9,7 +9,7 @@
 
 using namespace winrt::Microsoft::ReactNative;
 
-namespace winrt::BabylonReactNative::implementation
+namespace winrt::BabylonReactNativeView::implementation
 {
 
 void ReactPackageProvider::CreatePackage(IReactPackageBuilder const &packageBuilder) noexcept

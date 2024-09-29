@@ -9,7 +9,7 @@ using namespace winrt::Windows::Foundation::Collections;
 
 using namespace winrt::Microsoft::UI::Xaml;
 
-namespace winrt::BabylonReactNative::implementation {
+namespace winrt::BabylonReactNativeView::implementation {
     EngineViewManager::EngineViewManager() {}
 
     // IViewManager
@@ -17,7 +17,7 @@ namespace winrt::BabylonReactNative::implementation {
         return L"EngineView";
     }
 
-    winrt::BabylonReactNative::EngineView EngineViewManager::CreateView() noexcept {
+    winrt::BabylonReactNativeView::EngineView EngineViewManager::CreateView() noexcept {
         _engineView = make<EngineView>();
         return _engineView;
     }
@@ -64,6 +64,6 @@ namespace winrt::BabylonReactNative::implementation {
     }
 
     void RegisterEngineViewNativeComponent(IReactPackageBuilder const& builder) noexcept {
-      Codegen::RegisterEngineViewNativeComponent<winrt::BabylonReactNative::implementation::EngineViewManager>(builder, {});
+      winrt::EngineView::Codegen::RegisterEngineViewNativeComponent<winrt::BabylonReactNativeView::implementation::EngineViewManager>(builder, {});
     }
 } // namespace winrt::BabylonReactNative::implementation
