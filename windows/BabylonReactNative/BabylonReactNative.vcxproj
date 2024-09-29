@@ -113,10 +113,6 @@
     <ClInclude Include="BabylonModule.h" />
     <ClInclude Include="BabylonNative.h" />
     <ClInclude Include="DispatchFunction.h" />
-    <ClInclude Include="EngineView.h">
-      <DependentUpon>EngineView.idl</DependentUpon>
-    </ClInclude>
-    <ClInclude Include="EngineViewManager.h" />
     <ClInclude Include="ReactPackageProvider.h">
       <DependentUpon>ReactPackageProvider.idl</DependentUpon>
     </ClInclude>
@@ -126,10 +122,6 @@
   <ItemGroup>
     <ClCompile Include="BabylonModule.cpp" />
     <ClCompile Include="BabylonNative.cpp" />
-    <ClCompile Include="EngineView.cpp">
-      <DependentUpon>EngineView.idl</DependentUpon>
-    </ClCompile>
-    <ClCompile Include="EngineViewManager.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -139,7 +131,6 @@
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="EngineView.idl" />
     <Midl Include="ReactPackageProvider.idl" />
   </ItemGroup>
   <ItemGroup>

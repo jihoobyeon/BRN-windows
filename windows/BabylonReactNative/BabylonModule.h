@@ -8,10 +8,10 @@
 #include "NativeModules.h"
 
 namespace winrt::BabylonReactNative::implementation {
-    REACT_MODULE(BabylonModule, L"BabylonModule");
+    REACT_MODULE(BabylonModule);
     struct BabylonModule : std::enable_shared_from_this<BabylonModule>
     {
-        using ModuleSpec = BabylonModuleCodegen::BabylonModuleSpec;
+        using ModuleSpec = BabylonModuleCodegen::BabylonSpec;
 
         REACT_INIT(Initialize);
         void Initialize(const winrt::Microsoft::ReactNative::ReactContext& reactContext) noexcept;
