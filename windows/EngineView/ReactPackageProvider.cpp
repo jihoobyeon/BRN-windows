@@ -5,18 +5,17 @@
 #include "ReactPackageProvider.g.cpp"
 #endif
 
-#include "EngineViewManager.h"
+#include "EngineView.h"
 
 using namespace winrt::Microsoft::ReactNative;
 
-namespace winrt::BabylonReactNativeView::implementation
+namespace winrt::EngineView::implementation
 {
 
 void ReactPackageProvider::CreatePackage(IReactPackageBuilder const &packageBuilder) noexcept
 {
   AddAttributedModules(packageBuilder, true);
-
-  RegisterEngineViewNativeComponent(packageBuilder);
+  RegisterComponent(packageBuilder);
 }
 
-} // namespace winrt::BabylonReactNative::implementation
+} // namespace winrt::EngineView::implementation

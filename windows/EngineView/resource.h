@@ -1,5 +1,5 @@
 //
 // Microsoft Visual C++ generated include file.
-// Used by ReactNativeWindows.rc
+// Used by EngineView.rc
 
 #pragma once

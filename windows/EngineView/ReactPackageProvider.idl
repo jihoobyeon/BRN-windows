@@ -1,4 +1,4 @@
-namespace BabylonReactNativeView
+namespace EngineView
 {
   [webhosthidden]
   [default_interface]
