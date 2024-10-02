@@ -17,7 +17,7 @@
     "@babylonjs/react-native": "^1.8.6",
     "react": "^18.3.0",
     "react-native": "^0.75.0",
-    "react-native-windows": "^0.75.0"
+    "react-native-windows": "0.75.2"
   },
   "author": {
     "name": "Jihoo Byeon",
@@ -50,7 +50,7 @@
     "jsSrcsDir": ".",
     "windows": {
       "namespace": "BabylonModuleCodegen",
-      "outputDirectory": "windows/BabylonReactNative/codegen",
+      "outputDirectory": "windows/BabylonModule/codegen",
       "separateDataTypes": true
     }
   }

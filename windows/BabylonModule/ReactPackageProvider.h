@@ -4,20 +4,21 @@
 
 using namespace winrt::Microsoft::ReactNative;
 
-namespace winrt::BabylonReactNative::implementation
+namespace winrt::BabylonModule::implementation
 {
 
 struct ReactPackageProvider : ReactPackageProviderT<ReactPackageProvider>
 {
   ReactPackageProvider() = default;
+
   void CreatePackage(IReactPackageBuilder const &packageBuilder) noexcept;
 };
 
-} // namespace winrt::BabylonReactNative::implementation
+} // namespace winrt::BabylonModule::implementation
 
-namespace winrt::BabylonReactNative::factory_implementation
+namespace winrt::BabylonModule::factory_implementation
 {
 
 struct ReactPackageProvider : ReactPackageProviderT<ReactPackageProvider, implementation::ReactPackageProvider> {};
 
-} // namespace winrt::BabylonReactNative::factory_implementation
+} // namespace winrt::BabylonModule::factory_implementation
