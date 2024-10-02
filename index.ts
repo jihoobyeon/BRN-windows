@@ -1,4 +1,4 @@
-const BabylonModule = require('./NativeBabylonModule').defualt;
+const BabylonModule = require('./NativeBabylonModule').default;
 
 export function initialize(): Promise<boolean> {
   return BabylonModule.initialize();
